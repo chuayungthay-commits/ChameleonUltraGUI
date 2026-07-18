@@ -26,7 +26,10 @@ android {
     }
 
     defaultConfig {
-        applicationId = "io.chameleon.ultra"
+        // Sideload/fork ID — different from Play Store "io.chameleon.ultra"
+        // so CI debug-signed APKs can install without "package invalid" /
+        // signature conflicts with the store app.
+        applicationId = "io.chameleon.ultra.fork"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
